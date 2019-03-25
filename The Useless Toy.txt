@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    char c,c1;
+    cin>>c>>c1;
+    int n,i,j,i1,j1;
+	cin>>n;
+    n=n%4;
+    int a[]={118,60,94,62};
+    int b[]={62,94,60,118};
+    for(i=0;i<4;i++)
+    {
+        if((int)c==a[i])
+        break;
+    }
+    for(j=0;j<4;j++)
+    {
+        if((int)c1==a[j])
+        break;
+    }
+    for(i1=0;i1<4;i1++)
+    {
+        if((int)c==b[i1])
+        break;
+    }
+    for(j1=0;j1<4;j1++)
+    {
+        if((int)c1==b[j1])
+        break;
+    }
+    if((i+n)%4==j&&(i1+n)%4==j1)
+    cout<<"undefined\n";
+    else if((i+n)%4==j)
+    cout<<"cw\n";
+    else if((i1+n)%4==j1)
+    cout<<"ccw\n";
+
+	return 0;
+}

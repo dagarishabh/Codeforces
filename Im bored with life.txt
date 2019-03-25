@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+   long long int c,a,b,i;
+   cin>>a>>b;
+   c=min(a,b);
+   for(i=c-1;i>1;i--)
+   c=c*i;
+   cout<<c<<endl;
+}

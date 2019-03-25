@@ -1,0 +1,22 @@
+# cook your code here
+p=raw_input()
+p=p.split()      
+n=int(p[0])
+k=int(p[1])
+a=[]
+i=0
+r=raw_input()
+r=r.split()
+for i in r:
+    a.append(int(i))
+
+i=0
+list.sort(a)
+z=0
+while(i<n):
+    if(k+a[i]<6):
+        z=z+1
+    i=i+1
+print(z/3)
+
+    

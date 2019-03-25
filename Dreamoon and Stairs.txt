@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+#include<unordered_map>
+
+using namespace std;
+int main() {
+	int n,m;
+	cin>>n>>m;
+	int k,k1,i,j;
+	k=ceil((n*1.0)/2);
+	for(i=k;i<=n;i++)
+	if(i%m==0)
+	{
+	    cout<<i<<endl;
+        break;
+	}
+	if(i==n+1)
+	cout<<-1<<endl;
+	return 0;
+}

@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(void) {
+    
+    int n,k,d=10,n1,k1=0;
+    cin>>n>>k;
+    n1=n;
+    while(1)
+    {
+        if(n==d||n==d+k||k==n)
+        {
+            k1++;
+            break;
+        }
+        else if(d+k>n)
+        {
+            n+=n1;
+            k1++;
+        }
+        else
+        d+=10;
+    }
+    cout<<k1<<endl;
+    return 0;
+}
+

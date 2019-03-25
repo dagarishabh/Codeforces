@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(void) {
+    
+    int n,k=0,d=10,n1,k1=1;
+    cin>>n;
+    n1=n;
+    for(d=1;d<n;d++)
+    k1+=(n-d)*d;
+    cout<<k1+n-1<<endl;
+    return 0;
+}
+

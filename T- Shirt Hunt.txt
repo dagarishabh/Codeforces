@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+int cal(int n,int rank)
+{
+	int i,j;
+	i=n/50;
+	i%=475;
+	for(j=1;j<=25;j++)
+	{
+		i=i*96 +42;
+		i%=475;
+		if((26+i)==rank)
+		return 1;
+	}
+	return -1;
+}
+int main() {
+	int p,x,y,x1;
+	cin>>p>>x>>y;
+
+	int i,j=50,k=0;
+	x1=x;
+	int z=0;
+	while(x1>=y)
+	{
+	    z=cal(x1,p);
+	    //cout<<z<<endl;
+	    if(z==1)
+	    {
+	        cout<<"0\n";
+	        break;
+	    }
+	    x1=x1-j;
+	}
+	if(z!=1)
+	{
+	    x1=x;
+	    while(1)
+	    {
+	         z=cal(x1,p);
+	      
+	        
+	        if(z==1)
+	        {
+	            int m=ceil(1.0*(x1-x)/100.0);
+	            cout<<m<<endl;
+	            break;
+	        }
+	        x1=x1+j;
+	    }
+	}
+	return 0;
+}

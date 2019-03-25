@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+	char s[n+1],s1[n+1];
+	int sum=0;
+	cin>>s>>s1;
+	for(int i=0;i<n;i++)
+	sum+=(min(abs((int)s[i]-(int)s1[i]),10-abs((int)s[i]-(int)s1[i])));
+	cout<<sum<<endl;
+	return 0;
+}

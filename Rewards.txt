@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int a1,a2,a3,b1,b2,b3,n;
+	cin>>a1>>a2>>a3>>b1>>b2>>b3>>n;
+	if(ceil(((a1+a2+a3)*1.0)/5)+ceil(((b1+b2+b3)*1.0)/10)<=n)
+	cout<<"YES\n";
+	else
+	cout<<"NO\n";
+	return 0;
+}

@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+#include<unordered_map>
+
+using namespace std;
+int main() {
+	int n,m;
+	cin>>n>>m;
+	int i,k=0,j;
+	char c;
+    for(i=0;i<n;i++)
+    for(j=0;j<m;j++)
+    {
+        cin>>c;
+        if(c=='C'||c=='M'||c=='Y')
+        k=1;
+    }
+    if(k==1)
+    cout<<"#Color\n";
+    else
+    cout<<"#Black&White\n";
+	return 0;
+}

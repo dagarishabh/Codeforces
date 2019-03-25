@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,m;
+	float m1;
+	cin>>n;
+	m1=n/5.0;
+    m=n/5;
+    if(m1==m)
+    cout<<m<<endl;
+    else
+	cout<<m+1<<endl;
+	return 0;
+}

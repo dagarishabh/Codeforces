@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,m,m1;
+	cin>>n>>m;
+	m1=m;
+	while(n>=m1)
+	{
+	    n++;
+	    m1+=m;
+	}
+	cout<<n<<endl;
+	return 0;
+}

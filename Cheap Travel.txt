@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n,m,a,b;
+    cin>>n>>m>>a>>b;
+	if(m*a<=b)
+	cout<<n*a<<endl;
+	else
+	{
+	    int t1,t=n/m;
+	    t1=n%m;
+	    t*=b;
+	    t1=t1*a;
+	    if(t1>b)
+	    t+=b;
+	    else
+	    t+=t1;
+	    cout<<t<<endl;
+	}
+	return 0;
+}

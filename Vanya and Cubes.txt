@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+	int i,x;
+	for(i=1;i<=100;i++)
+	if((i*(i+1))/2>n)
+	break;
+	else
+	n-=(i*(i+1))/2;
+	cout<<i-1<<endl;
+	return 0;
+}

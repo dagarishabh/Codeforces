@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	int price=99999999,p,a,ans=0;;
+	while(n--)
+	{
+	    cin>>a>>p;
+	    price=min(p,price);
+	    ans+=price*a;
+	}
+	cout<<ans<<endl;
+	return 0;
+}

@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    char s[10];
+    cin>>s;
+    int h,m,k=0;;
+   
+    h=((int)s[1]-48)*10+(int)s[0]-48;
+    m=((int)s[3]-48)*10+(int)s[4]-48;
+    //cout<<h<<" "<<m<<endl;
+    while(h!=m)
+    {
+        m++;
+        if(m>59)
+        {
+            h+=10;
+            m-=60;
+        }
+        k++;
+        if(h>=100)
+        h-=99;
+        if(h==42)
+        h-=42;
+        //cout<<h<<" "<<m<<endl;
+    }
+    cout<<k<<endl;
+    return 0;
+}

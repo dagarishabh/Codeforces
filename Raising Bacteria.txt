@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int a,k=0;
+	cin>>a;
+	while(a!=0)
+	{
+	    if(a%2==1)
+	    k++;
+	    a=a/2;
+	}
+	cout<<k<<endl;
+	return 0;
+}

@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	char s[8][9];
+	int i,k1=0,k2=0,j;
+	for(i=0;i<8;i++)
+	cin>>s[i];
+	for(i=0;i<8;i++)
+	{
+	    for(j=0;j<8;j++)
+	    {
+	        if(s[i][j]=='q')
+	        k1+=9;
+	        if(s[i][j]=='r')
+	        k1+=5;
+	        if(s[i][j]=='b')
+	        k1+=3;
+	        if(s[i][j]=='n')
+	        k1+=3;
+	        if(s[i][j]=='p')
+	        k1+=1;
+	        
+	        if(s[i][j]=='Q')
+	        k2+=9;
+	        if(s[i][j]=='R')
+	        k2+=5;
+	        if(s[i][j]=='B')
+	        k2+=3;
+	        if(s[i][j]=='N')
+	        k2+=3;
+	        if(s[i][j]=='P')
+	        k2+=1;
+	        
+	    }
+	}
+	if(k2>k1)
+	cout<<"White"<<endl;
+	else if(k1>k2)
+	cout<<"Black\n";
+	else
+	cout<<"Draw\n";
+	return 0;
+}

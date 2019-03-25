@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int a,b,n,t=1;
+	
+	cin>>a>>b>>n;
+	while(n>0)
+	{
+	    if(t%2==1)
+	    n-=__gcd(a,n);
+	    else
+	    n-=__gcd(b,n);
+	    t++;
+	}
+	if(t%2==1)
+	cout<<1<<endl;
+	else
+	cout<<0<<endl;
+	return 0;
+}

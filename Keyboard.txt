@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+#include<unordered_map>
+
+using namespace std;
+int main() {
+	char c;
+	cin>>c;
+	char a[]={'q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l',';','z','x','c','v','b','n','m',',','.','/'};
+    char b[1001];
+    int i,j,k=0,l,l1;
+    cin>>b;
+    if(c=='L')
+    k=1;
+    else
+    k=-1;
+    l=strlen(b);
+    l1=strlen(a);
+    for(i=0;i<l;i++)
+    {
+        for(j=0;j<l1;j++)
+        {
+            if(a[j]==b[i])
+            {
+                cout<<a[j+k];
+                break;
+            }
+        }
+    }
+    cout<<endl;
+	return 0;
+}

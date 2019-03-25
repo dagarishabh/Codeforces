@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int n,k=3;float a;
+    cin>>n>>a;
+    float p,m1,m2;
+    p=(((n-2)*180)*1.0)/n;
+    if(n==3)
+    cout<<"1 2 3\n";
+    else
+    {
+        int n1=n-2;
+        m1=p;
+        m2=p/(n-2);
+        
+        while(1)
+        {
+            //cout<<m1<<endl;
+            //cout<<m2<<endl;
+            if(fabs(a-m1)>fabs(a-m1+m2))
+            {
+                m1-=m2;
+                k++;
+            }
+            else
+            break;
+        }
+        cout<<"1 2 "<<min(n,k)<<endl;
+    }
+    return 0;
+}

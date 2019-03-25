@@ -1,0 +1,156 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+   int m,n;
+   cin>>n>>m;
+   int a[n][m],b[n][m],i,j,b1[n][m];
+   for(i=0;i<n;i++)
+   for(j=0;j<m;j++)
+   {cin>>a[i][j];b[i][j]=0;b1[i][j]=0;}
+   int r[n],c[m],r1[n],c1[m];
+   for(i=0;i<n;i++)
+   {r[i]=0;r1[i]=0;}
+   for(j=0;j<m;j++)
+   {c[j]=0;c1[j]=0;}
+   int z1=0,z=900;
+     for(i=0;i<n;i++)
+        {
+            z1=0;z=900;
+            for(j=0;j<m;j++)
+            {
+                if(a[i][j]-b[i][j]>0)
+                {
+                    z1++;
+                    z=min(a[i][j]-b[i][j],z);
+                }
+            }
+            if(z1==m)
+            {
+                r[i]+=z;
+                for(j=0;j<m;j++)
+                b[i][j]+=z;
+            }
+        }
+        z=900;
+        for(i=0;i<m;i++)
+        {
+            z1=0;z=900;
+            for(j=0;j<n;j++)
+            {
+                if(a[j][i]-b[j][i]>0)
+                {
+                    z1++;
+                    z=min(a[j][i]-b[j][i],z);
+                }
+            }
+            if(z1==n)
+            {
+      
+                c[i]+=z;
+                for(j=0;j<n;j++)
+                b[j][i]+=z;
+            }
+        }
+
+    int x=0;
+    for(i=0;i<n;i++)
+    for(j=0;j<m;j++)
+    if(a[i][j]==b[i][j])
+    x++;
+
+z=900;z1=0;
+
+        z=900;
+        for(i=0;i<m;i++)
+        {
+            z1=0;z=900;
+            for(j=0;j<n;j++)
+            {
+                if(a[j][i]-b1[j][i]>0)
+                {
+                    z1++;
+                    z=min(a[j][i]-b1[j][i],z);
+                }
+            }
+            if(z1==n)
+            {
+      
+                c1[i]+=z;
+                for(j=0;j<n;j++)
+                b1[j][i]+=z;
+            }
+        }
+        z=900;
+        for(i=0;i<n;i++)
+        {
+            z1=0;z=900;
+            for(j=0;j<m;j++)
+            {
+                if(a[i][j]-b1[i][j]>0)
+                {
+                    z1++;
+                    z=min(a[i][j]-b1[i][j],z);
+                }
+            }
+            if(z1==m)
+            {
+                r1[i]+=z;
+                for(j=0;j<m;j++)
+                b1[i][j]+=z;
+            }
+        }
+
+
+
+
+
+
+    int sum=0,sum1=0;
+    for(i=0;i<n;i++)
+    sum+=r[i];
+    for(j=0;j<m;j++)
+    sum+=c[j];
+    for(i=0;i<n;i++)
+    sum1+=r1[i];
+    for(j=0;j<m;j++)
+    sum1+=c1[j];
+    
+    if(x!=n*m)
+    cout<<-1<<endl;
+    else if(sum<sum1)
+    {
+        
+        cout<<sum<<endl;
+        for(i=0;i<n;i++)
+        while(r[i]!=0)
+        {
+            cout<<"row "<<i+1<<endl;
+            r[i]--;
+        }
+        for(i=0;i<m;i++)
+        while(c[i]!=0)
+        {
+            cout<<"col "<<i+1<<endl;
+            c[i]--;
+        }
+    }
+    else
+    {
+        cout<<sum1<<endl;
+        for(i=0;i<n;i++)
+        while(r1[i]!=0)
+        {
+            cout<<"row "<<i+1<<endl;
+            r1[i]--;
+        }
+        for(i=0;i<m;i++)
+        while(c1[i]!=0)
+        {
+            cout<<"col "<<i+1<<endl;
+            c1[i]--;
+        }
+    }
+    return 0;
+}
