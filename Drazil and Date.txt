@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct arr
+{
+    int p;
+    int q;
+};
+
+bool acompare(arr lhs, arr rhs) { return lhs.p < rhs.p; }
+int main() {
+	long long int a,b,s;
+	cin>>a>>b>>s;
+	if((s-abs(a)-abs(b))>=0&&(s-abs(a)-abs(b))%2==0)
+	cout<<"Yes\n";
+	else
+	cout<<"No\n";
+	return 0;
+}

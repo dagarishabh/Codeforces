@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n,A[1000000],z=0,i,j,k=0,k1=0;
+    cin>>n;
+	A[0]=8;
+	A[1]=4;
+	A[2]=2;
+	A[3]=6;
+	n--;
+	n%=4;
+	if(n>=0)
+	cout<<A[n]<<endl;
+	else
+	cout<<1<<endl;
+	return 0;
+}

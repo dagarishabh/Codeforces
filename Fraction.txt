@@ -1,0 +1,22 @@
+// C++ program to print all primes smaller than or equal to
+// n using Sieve of Eratosthenes
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int n;
+   cin>>n;
+    int i,j;
+   if(n%2==0)
+   i=n/2-1,j=n/2+1;
+   else
+   i=n/2,j=n/2+1;
+   while(__gcd(i,j)!=1)
+   {
+       i--;
+       j++;
+   }
+   cout<<min(i,j)<<" "<<max(i,j)<<endl;
+    return 0;
+}

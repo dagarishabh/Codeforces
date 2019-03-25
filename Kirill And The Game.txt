@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	float l,r,x,y,k,a,b;
+	cin>>l>>r>>x>>y>>k;
+	a=l;
+	b=x;
+	while(1){if(k==a/b)
+	{
+	    cout<<"YES\n";
+	    return 0;
+	}
+	else if(k>a/b)
+	{
+	    a++;
+	    if(a>r)
+	    break;
+	}
+	else
+	{
+	    b++;
+	    if(b>y)
+	    break;
+	}
+    }
+	cout<<"NO\n";
+	return 0;
+}

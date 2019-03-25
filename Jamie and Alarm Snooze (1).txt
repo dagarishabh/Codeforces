@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int x,h,m,z=0;
+    cin>>x>>h>>m;
+    //cout<<h<<m<<endl;
+    while(1)
+    {
+        if(h%10==7||h/10==7||m%10==7||m/10==7)
+        break;
+        z++;
+        m-=x;
+        if(m<0)
+        {
+            h-=1;
+            m+=60;
+        }
+        if(h<0)
+        {
+            h+=24;
+            //m+=60;
+        }
+    }
+   // cout<<h<<" "<<m<<endl;
+    cout<<z<<endl;
+	return 0;
+}

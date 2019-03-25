@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct arr
+{
+    int p;
+    int q;
+};
+
+bool acompare(arr lhs, arr rhs) { return lhs.p < rhs.p; }
+int main() {
+	int n;
+	cin>>n;
+	struct arr s[n];
+	int a,b,i,j,k=0;
+	for(i=0;i<n;i++)
+	{
+	    cin>>a>>b;
+	    s[i].p=a;s[i].q=b;
+	}
+	sort(s,s+n,acompare);
+	for(i=0;i<n-1;i++)
+	{
+	    if(s[i].q>s[i+1].q&&s[i].p<s[i+1].p)
+	    {
+	        k=1;break;
+	    }
+	}
+	if(k==1)
+	cout<<"Happy Alex\n";
+	else
+	cout<<"Poor Alex\n";
+	return 0;
+}

@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	string s,s1;
+	cin>>s;
+	s1=s;
+	int i,j,k=-1,k1=-1,k2=-1,k3=-1;
+	for(i=0;i<s.length()-1;i++)
+	{
+        if(s[i]=='A'&&s[i+1]=='B')
+        {k1=i;s[i]=s[i+1]='0';break;}
+	}
+	for(i=0;i<s.length()-1;i++)
+	{
+        if(s[i]=='B'&&s[i+1]=='A'&&i!=k1)
+        {k=i;break;}
+	}
+	for(i=0;i<s.length()-1;i++)
+	{
+        if(s1[i]=='B'&&s1[i+1]=='A')
+        {k2=i;s1[i]=s1[i+1]='0';break;}
+	}
+	for(i=0;i<s.length()-1;i++)
+	{
+        if(s1[i]=='A'&&s1[i+1]=='B'&&i!=k1)
+        {k3=i;break;}
+	}
+	//cout<<k<<k1<<endl;
+	if(k1>=0&&k>=0||k2>=0&&k3>=0)
+	cout<<"YES\n";
+	else
+	cout<<"NO\n";
+	return 0;
+}

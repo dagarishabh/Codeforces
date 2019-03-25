@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string s;
+	cin>>s;
+	int i,j,k=0;
+	if(s.length()>=5)
+	{
+	    for(i=0;i<=s.length()-5;i++)
+	    if(s[i]=='D'&&s[i+1]=='a'&&s[i+2]=='n'&&s[i+3]=='i'&&s[i+4]=='l')
+	    k++;
+	}
+	if(s.length()>=4)
+	{
+	    for(i=0;i<=s.length()-4;i++)
+	    if(s[i]=='O'&&s[i+1]=='l'&&s[i+2]=='y'&&s[i+3]=='a')
+	    k++;
+	}
+	if(s.length()>=5)
+	{
+	    for(i=0;i<=s.length()-5;i++)
+	    if(s[i+0]=='S'&&s[i+1]=='l'&&s[i+2]=='a'&&s[i+3]=='v'&&s[i+4]=='a')
+	    k++;
+	}
+	if(s.length()>=3)
+	{
+	    for(i=0;i<=s.length()-3;i++)
+	    if(s[i+0]=='A'&&s[i+1]=='n'&&s[i+2]=='n')
+	    k++;
+	}
+	if(s.length()>=6)
+	{
+	    for(i=0;i<=s.length()-6;i++)
+	    if(s[i+0]=='N'&&s[i+1]=='i'&&s[i+2]=='k'&&s[i+3]=='i'&&s[i+4]=='t'&&s[i+5]=='a')
+	    k++;
+	}
+	if(k!=1)
+	cout<<"NO\n";
+	else
+	cout<<"YES\n";
+	return 0;
+}

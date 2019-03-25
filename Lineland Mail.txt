@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct arr
+{
+    long long int val,pos;
+};
+bool acompare(arr lhs, arr rhs) { return lhs.val < rhs.val; }
+int main() {
+	int n;
+	cin>>n;
+	long long int i,j,mini[n],maxi[n];
+	struct arr a[n];
+	for(i=0;i<n;i++)
+	{
+	    cin>>a[i].val;
+	    a[i].pos=i;
+	}
+	sort(a,a+n,acompare);
+	mini[a[0].pos]=a[1].val-a[0].val;
+	maxi[a[0].pos]=a[n-1].val-a[0].val;
+	mini[a[n-1].pos]=a[n-1].val-a[n-2].val;
+	maxi[a[n-1].pos]=a[n-1].val-a[0].val;
+	for(i=1;i<n-1;i++)
+	{
+	    mini[a[i].pos]=min(a[i+1].val-a[i].val,a[i].val-a[i-1].val);
+	    maxi[a[i].pos]=max(a[i].val-a[0].val,a[n-1].val-a[i].val);
+	}
+	for(i=0;i<n;i++)
+	cout<<mini[i]<<" "<<maxi[i]<<endl;
+	return 0;
+}

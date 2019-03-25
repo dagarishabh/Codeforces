@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct arr
+{
+    int p;
+    int q;
+};
+
+bool acompare(arr lhs, arr rhs) { return lhs.p < rhs.p; }
+int main() {
+	long long int n,n1=0,r,d=1;;
+	cin>>n;
+	while(n>0)
+	{
+	    r=n%10;
+	    if(r>4)
+	    r=9-r;
+	    if(n==9)
+	    r=n;
+	    n1=r*d+n1;
+	    d*=10;
+	    n/=10;
+	}
+	cout<<n1<<endl;
+	return 0;
+}

@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct arr
+{
+    int p;
+    int q;
+};
+
+bool acompare(arr lhs, arr rhs) { return lhs.p < rhs.p; }
+int main() {
+	string s;
+	cin>>s;
+	int i,j=0,k=1;
+	for(i=0;i<s.length();i++)
+	{
+	    if(s[i]=='A'||s[i]=='U'||s[i]=='O'||s[i]=='I'||s[i]=='E'||s[i]=='Y')
+	    k=1;
+	    else
+	    k++;
+	    j=max(j,k);
+	}
+	cout<<j<<endl;
+	return 0;
+}

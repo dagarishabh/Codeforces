@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	long long int n,k=0,a,b;
+	cin>>n;
+	while(n--)
+	{
+	    cin>>a>>b;
+	    k=max(k,a+b);
+	}
+	cout<<k<<endl;
+	return 0;
+}

@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+  long long int n;
+  cin>>n;
+  long long int a[n],i,j=0,k=0,z=0,sum=0,sum1=0,diff=10000000000;
+  for(i=0;i<n;i++)
+  {
+  	cin>>a[i];
+  }
+  if(n!=1){
+  
+  for(j=0;j<n;j++)
+  {
+	  sum=0;
+	  i=j;
+	  while(1)
+	  {
+	  	if(sum<180)
+	  	sum+=a[i++%n];
+	  	else
+	  	break;
+	  }
+	  diff=min(diff,abs(360-sum*2));
+  }
+  cout<<diff<<endl;
+}
+else
+cout<<a[0]<<endl;
+  return 0;
+}
