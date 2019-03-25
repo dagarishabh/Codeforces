@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n1,x1,x2,y1,y2,i;
+    cin>>n1>>x1>>y1>>x2>>y2;
+    char str[n1+1];
+    cin>>str;
+    int n=0,e=0,s=0,w=0,t=0,k=0;
+    if(x2-x1>0)
+    e+=(x2-x1);
+    if(x1-x2>0)
+    w+=(x1-x2);
+    if(y2-y1>0)
+    n+=(y2-y1);
+    if(y1-y2>0)
+    s+=(y1-y2);
+    for(i=0;i<n1;i++)
+    {
+        if(str[i]=='N')
+        n--;
+        if(str[i]=='S')
+        s--;
+        if(str[i]=='E')
+        e--;
+        if(str[i]=='W')
+        w--;
+        t++;
+        if(n<=0&&s<=0&&e<=0&&w<=0)
+        {
+            k=1;
+            break;
+        }
+    }
+    if(k==0)
+    cout<<"-1";
+    else
+    cout<<t;
+	return 0;
+}

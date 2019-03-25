@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    char c[101];
+    scanf("%s",c);
+    int l,i,k=0;
+    l=strlen(c);
+    for(i=0;i<l;i++)
+    {
+        if(c[i]=='H'||c[i]=='9'||c[i]=='Q')
+        {
+            printf("YES\n");
+            k=1;
+            break;
+        }
+    }
+    if(k!=1)
+    printf("NO\n");
+	return 0;
+	
+}

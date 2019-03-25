@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,a,b,k=0,i;
+	cin>>n>>a>>b;
+    for(i=a+1;i<=n;i++)
+    {
+        if(n-i>b)
+        continue;
+        else
+        k++;
+    }
+    cout<<k;
+	return 0;
+}

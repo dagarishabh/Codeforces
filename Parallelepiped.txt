@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int l,b,h;
+    scanf("%d%d%d",&l,&b,&h);
+    int k;
+    k=sqrt((l*b)/h)+sqrt((h*b)/l)+sqrt((l*h)/b);
+    printf("%d\n",4*k);
+    return 0;
+}
+    

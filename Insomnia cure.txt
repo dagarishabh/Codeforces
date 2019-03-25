@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,k,l,m,d;
+	scanf("%d%d%d%d%d",&k,&l,&m,&n,&d);
+	int a[d]; int i,s=0;
+	for(i=0;i<d;i++)
+	{
+	    a[i]=0;
+	}
+	for(i=0;i<d;i++)
+	{
+	    if((i+1)%k==0||(i+1)%l==0||(i+1)%m==0||(i+1)%n==0)
+	    a[i]=1;
+	    s=s+a[i];
+	}
+	printf("%d\n",s);
+	
+	
+	return 0;
+}

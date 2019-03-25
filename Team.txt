@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,k=0;
+    scanf("%d",&n);
+    while(n--)
+    {
+        int a1,a2,a3;
+        scanf("%d%d%d",&a1,&a2,&a3);
+        if(a1+a2+a3>=2)
+        k++;
+        
+    }
+    printf("%d\n",k);
+     
+	return 0;
+	
+}

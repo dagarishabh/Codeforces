@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(void) {
+    int n;
+    scanf("%d",&n);
+    int a[n],i,j,d=10000000,t1,t2;
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    for(i=0;i<n-1;i++)
+    {
+        if(abs(a[i]-a[i+1])<d)
+        {
+            d=abs(a[i]-a[i+1]);
+            t1=i+1;
+            t2=i+2;
+        }
+    }
+    if(d>abs(a[0]-a[n-1]))
+    {
+        t1=1;
+        
+        t2=n;
+    }
+    printf("%d %d\n",t1,t2);
+	return 0;
+}
+

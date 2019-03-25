@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(void) {
+    char s[1000],s1[1000];
+    scanf("%s%s",&s,&s1);
+    int l1,l2,i,j,m=0;
+    l1=strlen(s);
+    l2=strlen(s1);
+    if(l1!=l2)
+    printf("NO\n");
+    else
+    {
+        for(i=0,j=l1-1;i<l1;i++,j--)
+        {
+            if(s[i]!=s1[j])
+            {
+                m=1;
+                break;
+            }
+        }
+        if(m==1)
+        printf("NO\n");
+        else
+        printf("YES\n");
+    }
+	return 0;
+}
+

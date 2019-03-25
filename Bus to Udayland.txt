@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(void) {
+	int n,k=0;
+	scanf("%d",&n);
+	int i;
+	char a[n][6];
+	for(i=0;i<n;i++)
+	{
+	    scanf("%s",a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+	    if(a[i][0]=='O'&&a[i][1]=='O')
+	    {
+	        a[i][0]='+';a[i][1]='+';
+	        k=1;
+	    }
+	    if((a[i][3]=='O'&&a[i][4]=='O')&&k!=1)
+	    {
+	        a[i][3]='+';a[i][4]='+';
+	        k=1;
+	    }
+	    if(k==1)
+	    break;
+	}
+	if(k==1)
+    {
+        printf("Yes\n");
+    	for(i=0;i<n;i++)
+    	{
+	        printf("%s\n",a[i]);
+	    }
+    }
+    else
+    printf("No\n");
+	return 0;
+}
+

@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int n,m,n1,sum=0;
+	cin>>n>>m;
+	if(n>m)
+	{
+	    sum+=m;
+	    double y,x=sqrt(2*(n-m));
+	    long long int z;
+	    z=(int)x;
+	   // cout<<z<<endl;
+	    //y=z*1.0+0.5;
+	    //if(y<=x)
+	    //z++;
+	    //cout<<z<<endl;
+	    if(z*(z+1)>=2*(n-m))
+	    sum+=z;
+	    else if(z*(z-1)>=2*(n-m))
+	    sum+=(z-1);
+	    else if((z+1)*(z+2)>=2*(n-m))
+	    sum+=(z+1);
+	}
+	else
+	{
+	    sum+=n;
+	}
+	cout<<sum<<endl;
+	return 0;
+}

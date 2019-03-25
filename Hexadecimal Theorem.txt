@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(void) {
+    long long int n;
+    scanf("%I64d",&n);
+    long long int i,a,b[100],s=0,t=1,k=2;
+    b[0]=0;
+    b[1]=1;
+    for(i=0;s<10000000000;i++)
+    {
+        a=s;
+        s=t;
+        t=t+a;
+        b[k++]=t;
+    }   
+    if(n==0)
+    printf("0 0 0\n");
+    else if(n==1)
+    printf("0 0 1\n");
+    else if(n==2)
+    printf("0 1 1\n");
+    else if(n==3)
+    printf("1 1 1\n");
+    else 
+    {
+        for(i=0;i<k;i++)
+        {
+            if(b[i]==n)
+            break;
+        }
+    
+    printf("%I64d %I64d %I64d\n",b[i-4],b[i-3],b[i-1]);
+    }
+	return 0;
+}

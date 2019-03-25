@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+        char s[101],s1[201],s2[101],i,j,l1,l2;
+        scanf("%s%s%s",s1,s2,s);
+        strcat(s1,s2);
+        l1=strlen(s1);
+        l2=strlen(s);
+        if(l1!=l2)
+        printf("NO\n");
+        else
+        {
+            int p=0,p1=0;
+            sort(s1,s1+l1);
+            sort(s,s+l1);
+            for(i=0;i<l1;i++)
+            {
+                if(s[i]!=s1[i])
+                {
+                    p=1;
+                    break;
+                }
+            }
+            if(p==1)
+            printf("NO\n");
+            else
+            printf("YES\n");
+        }
+      
+    return 0;
+}

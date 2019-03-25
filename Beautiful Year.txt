@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int i,n,j,k,l,t;
+	scanf("%d",&n);
+	n++;
+	t=n;
+	i=t/1000;
+	t=t%1000;
+	j=t/100;
+	t=t%100;
+	k=t/10;
+	t=t%10;
+	l=t;
+	while(i==j||i==k||i==l||k==l||k==j||l==j)
+	{
+	    n++;
+	    t=n;
+	    i=t/1000;
+	    t=t%1000;
+	    j=t/100;
+	    t=t%100;
+	    k=t/10;
+	    t=t%10;
+	    l=t;
+	    
+	}
+	printf("%d",n);
+	
+	
+	return 0;
+}

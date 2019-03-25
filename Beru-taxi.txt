@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include<math.h>
+int main(void) {
+    int a,b,n;
+    scanf("%d%d%d",&a,&b,&n);
+    
+	int x[n],y[n],v[n],i;
+	double t[n],min=1000000000;
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d%d%d",&x[i],&y[i],&v[i]);
+	    t[i]=(sqrt((a-x[i])*(a-x[i])+(b-y[i])*(b-y[i])))/v[i];
+	    if(min>t[i])
+	    min=t[i];
+	}
+	printf("%lf\n",min);
+	return 0;
+}
+

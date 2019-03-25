@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	int a[n],i;
+	for(i=0;i<n;i++)
+	cin>>a[i];
+	int max=-1;
+	long long int sum=0;
+	for(i=0;i<n;i++)
+	{
+	    
+	    if(max<a[i])
+	    max=a[i];
+	}
+	for(i=0;i<n;i++)
+	{
+	    sum=sum+max-a[i];
+	}
+	cout<<sum<<"\n";
+	return 0;
+}

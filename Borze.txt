@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int i,t=0;
+	char s[201],c;
+	scanf("%s",s);
+	int l=strlen(s);
+	for(i=0;i<l;i++)
+	{
+	    if(s[i]=='.'&&t!=1)
+	    printf("0");
+	    else if(s[i]=='.'&&t==1)
+	    {
+	        printf("1");
+	        t=0;
+	    }
+	    else if(s[i]=='-'&&t==1)
+	    {
+	        printf("2");
+	        t=0;
+	    }
+	    else
+	    t++;
+	}
+	return 0;
+}

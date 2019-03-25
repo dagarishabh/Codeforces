@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,k=0;
+    scanf("%d",&n);
+    while(n--)
+    {
+        char s[4];
+        scanf("%s",s);
+        if(s[0]=='+'||s[2]=='+'||s[2]=='+')
+        k++;
+        else
+        k--;
+        
+    }
+    printf("%d\n",k);
+     
+	return 0;
+	
+}

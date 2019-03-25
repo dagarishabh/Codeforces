@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+
+int cmpfunc(const void * a,const void * b)
+{
+    return(*(int*)a-*(int*)b);
+}
+
+int main(void) {
+    int q,n;
+    scanf("%d",&n);
+    
+	int x[n],i,j,t=0,k,h,l,mid;
+	
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d",&x[i]);
+	    
+	}
+	scanf("%d",&q);
+	long long int m[q];
+	for(i=0;i<q;i++)
+	{
+	    scanf("%I64d",&m[i]);
+	    
+	}
+	qsort(x,n,sizeof(int),cmpfunc);
+	for(i=0;i<q;i++)
+	{
+	    l=0;h=n-1;
+	    if(m[i]>x[n-1])
+	    l=n;
+	    else if(m[i]<x[0])
+	    l=0;
+	    else
+	    {
+	        while(l<=h)
+	        {
+	            mid=(l+h)/2;
+	            if(m[i]>=x[mid])
+	            l=mid+1;
+	            else
+	            h=mid-1;
+	           
+	        }
+	    }
+	   
+	    printf("%d\n",l);
+	  
+	}
+	return 0;
+}
+

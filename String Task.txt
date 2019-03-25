@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int i,l,k=0,k1=0,m=0;
+	char s[101];
+	cin>>s;
+	l= strlen(s);
+    for(i=0;i<l;i++)
+    {
+        if(s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U'||s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='y'||s[i]=='Y')
+        {
+            s[i]='*';
+        }
+        if((int)s[i]>=65&&(int)s[i]<=90)
+        {
+            s[i]=(char)((int)s[i]+32);
+        }
+        
+    }
+    for(i=0;i<l;i++)
+    {
+        if(s[i]=='*')
+        continue;
+        else
+        cout<<"."<<s[i];
+    }
+	return 0;
+}

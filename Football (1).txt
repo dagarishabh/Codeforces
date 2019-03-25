@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(void) {
+    int n,i,j;
+    scanf("%d",&n);
+    int b[n];
+    char a[n][1000];
+    for(i=0;i<n;i++)
+    {
+        b[i]=0;
+        scanf("%s",a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i!=j)
+            if(strcmp(a[i],a[j])==0)
+            b[i]++;
+        }
+    }
+    
+    int max=-999,t;
+    for(i=0;i<n;i++)
+    {
+        if(b[i]>max)
+        {
+            max=b[i];
+            t=i;
+        }
+    }
+    printf("%s\n",a[t]);
+	return 0;
+}
+

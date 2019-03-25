@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    long long int k=0,m,n,a;
+    cin>>m>>n>>a;
+    long long int ans=m*n;
+    k=((m+a-1)/a)*((n+a-1)/a);
+    cout<<k;
+	return 0;
+}

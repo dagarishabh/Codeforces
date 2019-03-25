@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int k;
+	cin>>k;
+	int i,j,a[12];
+	for(i=0;i<12;i++)
+	{
+	    cin>>a[i];
+	}
+	sort(a,a+12);
+	
+	int s=0,r=0;
+	for(i=11;i>=0;i--)
+	{
+	    if(s>=k)
+	    break;
+	    else
+	    {
+	        s+=a[i];
+	        r++;
+	    }
+	}
+	if(s>=k)
+	cout<<r;
+	else
+	cout<<"-1";
+	return 0;
+}

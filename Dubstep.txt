@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	char s[1000],s1[1000];
+	int i,k=0;
+	cin>>s;
+	for(i=0;i<strlen(s);i++)
+	{
+	    if(s[i]=='W'&&s[i+1]=='U'&&s[i+2]=='B')
+	    {
+	        i=i+2;
+	        s1[k++]=' ';
+	    }
+	    else
+	    s1[k++]=s[i];
+	}
+	for(i=0;i<k;i++)
+	{
+	    if(s1[i]==' ' &&i==0)
+	    continue;
+	    else if(s1[i]==' ' &&s1[i-1]==' ')
+	    continue;
+	    else
+	    cout<<s1[i];
+	}
+	return 0;
+}

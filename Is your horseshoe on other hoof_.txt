@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int s[4];
+	scanf("%I64d%I64d%I64d%I64d",&s[0],&s[1],&s[2],&s[3]);
+	int i,j=1,k[]={0,0,0,0};
+	sort(s,s+4);
+//	for(i=0;i<4;i++)
+//	{
+//	    printf("%d",s[i]);
+//	}
+	for(i=0;i<3;i++)
+	{
+	    if(s[i]!=s[i+1])
+	    j++;
+	    //if(s[i]==s[i+1])
+	    //j--;
+	}
+	
+	printf("%d",4-j);
+	
+	return 0;
+}

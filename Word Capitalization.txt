@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	char s[1001];
+	scanf("%s",s);
+	int l=strlen(s);int i;
+	if(s[0]>96&&s[0]<123)
+	s[0]=s[0]-32;
+
+	printf("%s\n",s);
+	return 0;
+}

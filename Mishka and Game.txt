@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+	int n,i,a=0,b=0,m,c;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d%d",&m,&c);
+	    if(m>c)
+	    a++;
+	    else if(m<c)
+	    b++;
+	}
+	if(a==b)
+	printf("Friendship is magic!^^\n");
+	else if(a>b)
+	printf("Mishka\n");
+	else if(a<b)
+	printf("Chris\n");
+	return 0;
+}
+

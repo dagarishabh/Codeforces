@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,m;
+	cin>>n>>m;
+	char a[n][m],i,j,k=0,b[n][m];
+	for(i=0;i<n;i++)
+	{
+	    for(j=0;j<m;j++)
+	    cin>>a[i][j];
+	}
+	for(i=0;i<n;i++)
+	{
+	    for(j=0;j<m;j++)
+	    {
+	        if((i+j)%2==0)
+	        b[i][j]='B';
+	        else
+	        b[i][j]='W';
+	    }
+	}
+	for(i=0;i<n;i++)
+	{
+	    for(j=0;j<m;j++)
+	    {
+	        if(a[i][j]=='.')
+	        {
+	            cout<<b[i][j];
+	        }
+	        else
+	        cout<<a[i][j];
+	    }
+	    cout<<endl;
+	}
+	return 0;
+}

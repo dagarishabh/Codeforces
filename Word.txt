@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int i,j=0,k=0;
+	char s[101];
+	scanf("%s",s);
+	for(i=0;s[i]!='\0';i++)
+	{
+	    if((int)s[i]>96&&(int)s[i]<123)
+	    k++;
+	    else
+	    j++;
+	}
+//	printf("%d,%d",k,j);
+	if(k>=j)
+	{
+	    for(i=0;s[i]!='\0';i++)
+    	{
+	        if((int)s[i]>96&&(int)s[i]<123)
+	        continue;
+	        else
+	        s[i]=(char)((int)s[i]+32);
+	    }
+	}
+	else if(k<j)
+	{
+	    for(i=0;s[i]!='\0';i++)
+    	{
+	        if((int)s[i]>96&&(int)s[i]<123)
+	        s[i]=(char)((int)s[i]-32);
+	        
+	    }
+	}
+	for(i=0;s[i]!='\0';i++)
+	printf("%c",s[i]);
+	
+
+	
+	
+	return 0;
+}

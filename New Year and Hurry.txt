@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n,k;
+    cin>>n>>k;
+    int i=1,r=0,m=0;
+    while(k+r<240)
+    {
+        r=r+i*5;
+        i++;
+        //cout<<r<<endl;
+        m++;
+    }
+    if(m>n)
+    cout<<n;
+    else if(k+r>240)
+    cout<<m-1;
+    else if(k+r==240)
+    cout<<m;
+	return 0;
+}
